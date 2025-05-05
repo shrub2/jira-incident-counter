@@ -19,7 +19,7 @@ class Counter:
 # End of Counter
 
 config = configparser.ConfigParser()
-config.read('config.txt')
+config.read('config.conf')
 
 domain = config.get('JIRA', 'DOMAIN')
 email = config.get('JIRA', 'EMAIl')
