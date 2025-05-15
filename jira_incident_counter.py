@@ -1,6 +1,8 @@
 import datetime
 import configparser
 import requests
+import json
+import re
 
 
 class Counter:
@@ -18,6 +20,8 @@ class Counter:
         
 # End of Counter
 
+counter = Counter()
+
 config = configparser.ConfigParser()
 config.read('config.conf')
 
@@ -26,6 +30,8 @@ email = config.get('JIRA', 'EMAIl')
 api_token = config.get('JIRA', 'API_TOKEN')
 
 jql = config.get('JIRA', 'JQL')
+field = config.get('JIRA', 'FIELD')
+field_value = config.get('JIRA', 'FIELD_VALUE')
 url = f"https://{domain}/rest/api/latest/search"
 
 auth = (email, api_token)
@@ -35,6 +41,7 @@ headers = {
 
 params = {
         "jql": jql,
+        "fields": field,
         "maxResults": 10
 }
 
@@ -43,8 +50,10 @@ response = requests.get(url, headers=headers, params=params, auth=auth)
 if response.status_code == 200:
     issues = response.json().get("issues", [])
     for issue in issues:
-        key = issue["key"]
-        print(key)
+        match = re.search(field_value, json.dumps(issue.get("fields").get(field)))
+        if match:
+            print("Found match. Resetting counter...")
+            counter.reset()
 else:
     print("Error:", response.status_code)
     print(response.text)
