@@ -12,7 +12,7 @@ My plan is to implement it on an ESP32. I'll switch from Python to C++ most like
 ---
 
 To-do list:
-- [ ] Implement proper traversal for nested JSON fields
+- [ ] Implement a proper traversal for nested JSON fields
 - [ ] ESP32 firmware rewrite in C++
 - [ ] Connect to Wi-Fi and fetch data
 - [ ] Working OLED display
