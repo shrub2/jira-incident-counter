@@ -1,0 +1,2 @@
+source /home/shrub/Documents/code/jira-incident-counter/esp32/build/bootloader/gdbinit/symbols
+source /home/shrub/Documents/code/jira-incident-counter/esp32/build/bootloader/gdbinit/connect
