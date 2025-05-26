@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32",
-    "project_version":    "18adfe8-dirty",
+    "project_version":    "329300c-dirty",
     "project_path":       "/home/shrub/Documents/code/jira-incident-counter/esp32",
     "idf_path":           "/home/shrub/esp-idf",
     "build_dir":          "/home/shrub/Documents/code/jira-incident-counter/esp32/build",
@@ -1240,7 +1240,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/shrub/Documents/code/jira-incident-counter/esp32/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/shrub/Documents/code/jira-incident-counter/esp32/main/main.cpp" ],
+            "sources": [ "/home/shrub/Documents/code/jira-incident-counter/esp32/main/main.cpp", "/home/shrub/Documents/code/jira-incident-counter/esp32/main/Counter.cpp" ],
             "include_dirs": []
         },
         "mbedtls": {
