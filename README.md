@@ -12,10 +12,11 @@ My plan is to implement it on an ESP32. I'll switch from Python to C++ most like
 ---
 
 To-do list:
-- [ ] Implement a proper traversal for nested JSON fields
-- [ ] ESP32 firmware rewrite in C++
-- [ ] Connect to Wi-Fi and fetch data
-- [ ] Working OLED display
+- [x] ESP32 firmware rewrite in C++
+- [x] Working OLED display
+- [ ] Wi-Fi connection
+- [ ] Jira API data fetching
+- [ ] Set up logging
 - [ ] Manual reset button
 - [ ] Rechargeable battery support
 - [ ] Simple ML model
